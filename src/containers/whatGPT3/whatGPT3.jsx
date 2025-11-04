@@ -7,7 +7,10 @@ const WhatGPT3 = () => {
   return (
     <div className="gpt3__whatgpt3 section__margin" id="whatgpt3">
       <div className="gpt3__whatgpt3-feature">
-       
+            <Feature
+              title="What is GPT-3?"
+              text="GPT-3 is an advanced AI language model that can generate natural language, answer questions, and help build intelligent features."
+            />
       </div>
       <div className="gpt3__whatgpt3-heading">
         <h1 className="gradient__text">The possibilities are beyond your imagination</h1>

@@ -1,9 +1,8 @@
 .gpt3__feature {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    margin: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
 }
 
 .gpt3__feature h4 {
@@ -13,7 +12,7 @@
     line-height: 24px;
     letter-spacing: -0.04em;
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin: 0;
 }
 
 .gpt3__feature p {
@@ -22,4 +21,5 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--color-text);
+    margin: 0;
 }
