@@ -2,28 +2,16 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background: var(--color-footer);
-
-    /* ff 3.6+ */
-    background: -moz-radial-gradient(circle, var(--color-footer) 0%, var(--color-bg) 100%);
-
-    /* safari 5.1+,chrome 10+ */
-    background: -webkit-radial-gradient(circle, var(--color-footer) 0%, var(--color-bg) 100%);
-
-    /* opera 11.10+ */
-    background: -o-radial-gradient(circle, var(--color-footer) 0%, var(--color-bg) 100%);
-
-    /* ie 10+ */
-    background: -ms-radial-gradient(circle, var(--color-footer) 0%, var(--color-bg) 100%);
-
-    /* global 92%+ browsers support */
+    /* use theme variables; fall back removed to avoid accidental overrides */
     background: radial-gradient(circle, var(--color-footer) 0%, var(--color-bg) 100%);
-
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .gpt3__whatgpt3-feature {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 2rem;
+    align-items: start;
     margin: 0 0 2rem;
 }
 
@@ -31,12 +19,37 @@
     margin: 0;
 }
 
+.gpt3__whatgpt3-feature .gpt3__feature p {
+    max-width: 700px;
+}
+
+.gpt3__whatgpt3-card {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--color-blog);
+    padding: 3rem 4rem;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(2,8,20,0.6);
+}
+
+.gpt3__whatgpt3-feature-left {
+    /* leading feature */
+}
+
+.gpt3__whatgpt3-feature-right p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+
 .gpt3__whatgpt3-heading {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 4rem 0 2rem;
+    margin: 3rem 0 2rem;
 }
 
 .gpt3__whatgpt3-heading h1 {
@@ -57,8 +70,15 @@
 }
 
 .gpt3__whatgpt3-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .gpt3__whatgpt3-card { padding: 2rem; }
+    .gpt3__whatgpt3-feature { grid-template-columns: 1fr; }
+    .gpt3__whatgpt3-container { grid-template-columns: 1fr; }
+    .gpt3__whatgpt3-heading { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }

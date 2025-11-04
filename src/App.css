@@ -24,6 +24,11 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.gradient__text {
+    /* ensure gradient clipping works reliably */
+    display: inline-block;
+}
+
 .section__padding {
     padding: 4rem 6rem;
 }
