@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import { Article, Brand, CTA, Feature, Navbar } from './components';
-import { Blog, Features, Footer, Header, Possibility, WhatGLT3 } from './containers';
+import { Blog, Features, Footer, Header, Possibility, WhatGPT3 } from './containers';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <Header />
       </div>
       <Brand />
-      <WhatGLT3 />
+      <WhatGPT3 />
       <Features />
       <Possibility />
       <CTA />
